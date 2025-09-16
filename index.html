@@ -1,35 +1,70 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Ron Prrenjasi's Page</title>
-    <link rel="stylesheet" href="style.css"/> <!-- do not change this line -->
-  </head>
-  <body>
-    <header>
-      <h1> Ron Prrenjasi</h1> <!-- change this heading to your name -->
-    </header>
-
-    <main>
-      <!-- ====== ABOUT SECTION (edit the text) ====== -->
-      <h2>About Me</h2>
-      <p>I am a student at Queen’s School of Computing. I’m interested in anything and everything about computers, I love watching soccer, I also love to cook.</p>
-
-      <!-- ====== PHOTO (upload me.jpg to repo root, then update the src below) ====== -->
-      <img src="SAM_0049.jpg" alt="My portrait" width="240" height="240" />
-
-      <!-- ====== PROJECTS/COURSES (add or rename items to courses instead of projects) ====== -->
-      <h2>Projects</h2>
-      <ul>
-        <li>Project One — currently dont have any projects lol. cuurently working on some tho.</li>
-        <li>Project Two — coming soon.</li>
-      </ul>
-
-      <!-- ====== CONTACT (update your links) ====== -->
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:24gw49@queensu.ca">24gw49@queensu.ca</a></p>
-      <p>LinkedIn: <a href="#">https://www.linkedin.com/in/ron-prrenjasi-631867288/</a></p>
-    </main>
-  </body>
-</html>
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/index.html b/index.html
+index 102728f51fbf3f3a2563e2c33473e1e4b10d2a3a..acd01dd63618ef291ae2fe7d7839922fcef53cc3 100644
+--- a/index.html
++++ b/index.html
+@@ -1,35 +1,46 @@
+ <!doctype html>
+ <html lang="en">
+   <head>
+     <meta charset="utf-8"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+-    <title>Ron Prrenjasi's Page</title>
+-    <link rel="stylesheet" href="style.css"/> <!-- do not change this line -->
++    <title>Ron Prrenjasi | Queen’s School of Computing</title>
++    <link rel="stylesheet" href="style.css"/>
+   </head>
+   <body>
+     <header>
+-      <h1> Ron Prrenjasi</h1> <!-- change this heading to your name -->
++      <h1>Ron Prrenjasi</h1>
++      <p class="tagline">Queen’s School of Computing student exploring technology, soccer, and good food.</p>
+     </header>
+ 
+     <main>
+-      <!-- ====== ABOUT SECTION (edit the text) ====== -->
+-      <h2>About Me</h2>
+-      <p>I am a student at Queen’s School of Computing. I’m interested in anything and everything about computers, I love watching soccer, I also love to cook.</p>
++      <section aria-labelledby="about">
++        <h2 id="about">About Me</h2>
++        <p>Hi! I’m Ron Prrenjasi, a student at Queen’s School of Computing with a passion for understanding how technology solves real-world problems. When I’m not experimenting with new tools or tackling coursework, you can usually find me watching soccer matches or trying out new recipes in the kitchen.</p>
++      </section>
+ 
+-      <!-- ====== PHOTO (upload me.jpg to repo root, then update the src below) ====== -->
+-      <img src="SAM_0049.jpg" alt="My portrait" width="240" height="240" />
++      <section aria-labelledby="photo" class="profile">
++        <figure>
++          <img src="SAM_0049.jpg" alt="Portrait of Ron Prrenjasi" width="240" height="240"/>
++          <figcaption>Staying curious and creative on and off the field.</figcaption>
++        </figure>
++      </section>
+ 
+-      <!-- ====== PROJECTS/COURSES (add or rename items to courses instead of projects) ====== -->
+-      <h2>Projects</h2>
+-      <ul>
+-        <li>Project One — currently dont have any projects lol. cuurently working on some tho.</li>
+-        <li>Project Two — coming soon.</li>
+-      </ul>
++      <section aria-labelledby="interests">
++        <h2 id="interests">Interests</h2>
++        <ul>
++          <li>Diving into programming concepts and hands-on computing projects.</li>
++          <li>Following soccer and supporting my favourite clubs.</li>
++          <li>Experimenting in the kitchen and sharing meals with friends.</li>
++        </ul>
++      </section>
+ 
+-      <!-- ====== CONTACT (update your links) ====== -->
+-      <h2>Contact</h2>
+-      <p>Email: <a href="mailto:24gw49@queensu.ca">24gw49@queensu.ca</a></p>
+-      <p>LinkedIn: <a href="#">https://www.linkedin.com/in/ron-prrenjasi-631867288/</a></p>
++      <section aria-labelledby="contact">
++        <h2 id="contact">Contact</h2>
++        <ul class="contact-list">
++          <li>Email: <a href="mailto:24gw49@queensu.ca">24gw49@queensu.ca</a></li>
++          <li>LinkedIn: <a href="https://www.linkedin.com/in/ron-prrenjasi-631867288/">linkedin.com/in/ron-prrenjasi-631867288</a></li>
++        </ul>
++      </section>
+     </main>
+   </body>
+ </html>
